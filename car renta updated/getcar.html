@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+<style>
+
+body{
+   background:linear-gradient(#923ae4,#c08af3);  
+}
+
+/* .sedan .container */
+
+section{
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.container .cars{
+    display: flex;
+    gap: 18px;
+    align-items:flex-start;
+    height: 12em;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.068);
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 2em;
+}
+.container .cars .car-img{
+    width: 20%;
+}
+.container .cars .car-img img{
+    width: 100%;
+    border-radius:14px;
+}
+
+.container .cars .book-btn{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+
+
+section{
+    margin-bottom: 5em;
+}
+
+
+
+
+
+
+/* .container .cars .book-btn button {
+ background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  border-radius: 8px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 3px 8px;
+  transition:.5s ease;
+
+
+
+   font-family: Phantomsans, sans-serif;
+} */
+
+
+/* .container .cars .book-btn button:active,
+.container .cars .book-btn button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+    .container .cars .book-btn button{
+    font-size: 24px;
+    min-width: 196px;
+  }
+} */
+
+
+
+
+
+.container .cars .book-btn .btn{
+    text-align: center;
+}
+
+
+.container .cars .book-btn button {
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  color: #FFFFFF;
+  font-family: Phantomsans, sans-serif;
+  font-size: 1.1em;
+  padding: 19px 24px;
+  cursor: pointer;
+ 
+}
+
+.container .cars .book-btn button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition: .1s ease;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+.rating{
+    background: rgb(29, 124, 233);
+    padding: 3px;
+    border-radius: 10px;
+    font-size: .6rem;
+    margin-left: 5px;    
+}
+.pricing{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    color:rgb(77, 74, 69);
+    font-family: "Segoe UI";
+}
+.container .cars .details .car-name{
+    font-weight: 600;
+}
+.container .cars .details{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+
+/* copyright */
+.copyright{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: ;
+}
+
+.social a{
+    color: #444;
+    padding: 10px;
+    font-size: 21px;    
+ }
+
+
+</style>
+</head>
+<body>
+    
+
+    <div class="mainhead">
+    
+        <div class="dtails">
+            <a href="#" class>Logo</a>
+            <span>
+                <i class="ri-phone-fill"></i>
+                <p class="pinline">+91 1234567890</p>
+            </span>
+            <span>
+                <i class="ri-mail-fill"></i>
+                <a href="#">Drivino@dehradun.com</a>
+    
+            </span>
+    
+    
+        </div>
+        <div class="location-info">
+        <span><i class="ri-map-pin-2-fill"></i></span>
+        Dehradun City
+    </div>
+        
+    </div>
+    
+        <header>
+            <h3>Drivino - Rent Your Ride</h3>
+            <!-- menu icon -->
+            <i class="ri-menu-line" id="menu-icon"></i>
+           
+            
+            <ul class="navbar">
+                <li><a href="index.html" class="hover nav-link">Home</a></li>
+                <li><a href="index.html#about-us"class="hover ">About Us</a></li>
+                <li><a href="getcar.html"class="hover nav-link">Get Car</a></li>
+                <li><a href="contact.html"class="hover nav-link">Contact us</a></li>
+                <li><a href="index.html" id="login-btn" class="main-btn">Login</a></li>
+            </ul>
+        </header>
+        
+
+                      <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ SEDAN ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+        <section class="sedan " id="sedan">
+        <h3 class="heading">Sedans</h3>
+        <div class="container">
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift-Dzire/10243/1686044076724/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Suzuki Dzire</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                ₹ 100 per hour |   ₹ 2000 / Day
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+
+<!-- new ------------------------------- -->
+
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Slavia/9807/1691643999681/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Skoda Slavia</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+
+<!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/9710/1677914238296/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Honda City</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+
+<!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/10624/1689938817194/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Volkswagen Virtus</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 1099
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+<!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Camry/10926/1708690549497/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Toyota Camry</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                       
+<!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/9744/1694602806760/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Hyundai Verna</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                          
+<!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/10519/1689589132736/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Honda Amaze</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                    
+ <!-- new ------------------------------- -->
+                <div class="swift cars">
+                    <div class="swift-img car-img">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ciaz/10346/1687437427620/front-left-side-47.jpg?tr=w-664" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="box">
+                            <span class="car-name">Maruti Ciaz</span>
+                            <span class="rating">4.3/5</span>
+                        </div>
+                        <div class="features">
+                            <p>Sedan | 5 Seats 💺 | AC ❄️ </p>
+                        </div>
+
+                        <div class="price">
+                            <p>
+                                10kms included | 18.88/km after 10 kms
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="book-btn" id="swift-btn">
+                        <span class="pricing">
+                            ₹ 599
+                        </span>
+                        <div class="btn">
+                        <button>Book Now</button>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+ 
+
+
+              <!-- ######################  HATCHBACK  ############################## -->
+        
+
+        <section class="hatchback " id="hatchback">
+            <h3 class="heading">Hatchbacks</h3>
+            <div class="container">
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Baleno/10497/1697697558001/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Maruti Baleno</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src=" https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/10406/1697698080681/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Maruti Swift</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tiago/10655/1706791879838/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Tata Tiago</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/i20/9471/1697696007962/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Hyundai i20</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/KWID/10076/1705905595853/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Renault KWID</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Altroz/10707/1706784476472/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Tata Altroz</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/9894/1710232743367/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Citroen C3</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Wagon-R/10365/1687580655855/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Maruti Wagon R</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Hatchback | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </section>
+    
+
+           
+            <!-- ************************** SUV ************************ -->
+        
+
+        <section class="suv " id="suv">
+            <h3 class="heading">SUV</h3>
+            <div class="container">
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Thar/10745/1697697308167/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Mahindra Thar</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 4 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->    
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Harrier/9368/1697532960290/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Tata Harrier</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+<!-- new ------------------------------- -->   
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector/10958/1709534656842/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">MG Hector</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Gurkha/10634/1690350840442/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Force Gurkha</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 4 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Jimny/6182/1686117643111/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Maruti Jimny</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 4 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10941/Jeep-Compass-2.0-Model-S-Opt-4x4-AT/1698294241076/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Jeep Compass</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio/10764/1708522826716/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Mahindra Scorpio</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 7 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Fortuner/10903/1695443447797/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Toyota Fortuner</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> SUV | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </section>
+
+        
+        
+        
+            <!-- ++++++++++++++++++++++ LUXURY ++++++++++++++++++++++++++++++++++ -->
+
+
+        <section class="luxury " id="luxury">
+            <h3 class="heading">Luxury</h3>
+            <div class="container">
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/S5-Sportback/10569/1689596046874/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Audi S5 Sportback</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Lexus LS</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9065/Land-Rover-Defender-2.0-90-HSE/1686138012912/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Land Rover Defender</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC-90/10588/1689924353443/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Volvo XC90</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/Z4/10183/1685003672330/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">BMW Z4</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Urus/10636/1690010693541/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Lamborghini Urus</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/718/10989/1690874880367/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Porsche 718</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    <!-- new ------------------------------- -->
+                    <div class="swift cars">
+                        <div class="swift-img car-img">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class/10258/1698827192159/front-left-side-47.jpg?tr=w-664" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="box">
+                                <span class="car-name">Mercedes-Benz G-Class</span>
+                                <span class="rating">4.3/5</span>
+                            </div>
+                            <div class="features">
+                                <p> Luxury | 5 Seats 💺 | AC ❄️ </p>
+                            </div>
+    
+                            <div class="price">
+                                <p>
+                                    10kms included | 18.88/km after 10 kms
+                                </p>
+                            </div>
+    
+                        </div>
+                        <div class="book-btn" id="swift-btn">
+                            <span class="pricing">
+                                ₹ 599
+                            </span>
+                            <div class="btn">
+                            <button>Book Now</button>
+                        </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </section>
+
+            
+            
+            
+            
+            <!-- ***************************copyright****************************** -->
+
+    <div class="copyright">
+        <p>&#169; Drivino™ All Rights Reserved®</p>
+        <div class="social">
+            <a href="#"><i class="ri-facebook-line"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+
+           <script>
+              // Get the current URL
+  var currentUrl = window.location.href;
+
+// Get all navigation links
+var navLinks = document.querySelectorAll('.nav-link');
+
+// Loop through each link and check if its href matches the current URL
+navLinks.forEach(function(link) {
+  if (link.href === currentUrl) {
+    // Add 'current-page' class to the link if it matches the current URL
+    link.classList.add('current-page');
+  }
+});
+           </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

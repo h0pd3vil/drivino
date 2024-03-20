@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.login-parent{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+.login-wrapper{
+    position: relative;
+    z-index: 100;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    top: 100px;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    transition:transform .25s ease, height .2s ease;
+    overflow: hidden;
+    margin:0 auto;
+    transform: scale(0);
+}
+.login-wrapper.active{
+    height: 520px;
+
+}
+.login-wrapper.active-popup{
+    transform: scale(1);
+}
+
+.login-wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2{
+    font-size: 2em;
+    color:#162938;
+    text-align:center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    /* pointer-events: none; */
+    transition: .2s; 
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding:0 35px 0 5px; 
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+.remember{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin:-15px 0 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input{
+    accent-color: #162938;
+    margin-right:3px;
+}
+.remember a{
+    color: #162938;
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.login-wrapper .login-btn,.register-btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #162938;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 6px;
+    color: wheat;
+}
+.register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin:25px 0 10px;
+}
+.register .register-link,.login-link{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.register .register-link:hover{
+    text-decoration: underline;
+
+}
+.register .login-link:hover{
+    text-decoration: underline;
+}
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background:#162938;
+    font-size: 2em;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 100;
+
+}
+.login-wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translatex(0);
+}
+
+.login-wrapper.active .form-box.login{
+    
+    transition: none;
+    transform: translatex(-400px);
+    /* display: none; */
+}
+
+
+.login-wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translatex(400px);
+}
+
+.login-wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+
+
+@media (max-width:750px){
+    header{
+    padding: 18px 40px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: wheat;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        transition: .2s ease;
+        text-align: left;
+    }
+
+    .navbar a{
+        padding: 1rem;
+        border-left: 2px solid var(--main-color);
+        margin: 1rem;
+        display: block;
+}
+    .navbar a:hover{
+        color: white;
+        background: var(--main-color);
+        border: none;
+    }
+    .navbar a::after {
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+        left: 70%;
+        
+    }
+    .navbar a#login-btn{
+        background: wheat;
+        border-radius:0;
+    }
+}
+
+</style>
+<link rel="stylesheet" href="styleshome.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+
+    <div class="mainhead">
+    
+    <div class="dtails">
+        <a href="#" class>Logo</a>
+        <span>
+            <i class="ri-phone-fill"></i>
+            <p class="pinline">+91 1234567890</p>
+        </span>
+        <span>
+            <i class="ri-mail-fill"></i>
+            <a href="#">Drivino@dehradun.com</a>
+
+        </span>
+
+    </div>
+    <div class="location-info">
+    <span><i class="ri-map-pin-2-fill"></i></span>
+    Dehradun City
+</div>
+    
+</div>
+
+    <header>
+        <h3>Drivino - Rent Your Ride</h3>
+        <!-- menu icon -->
+        <i class="ri-menu-line" id="menu-icon"></i>
+       
+        
+        <ul class="navbar">
+            <li><a href="index.html" class="hover nav-link">Home</a></li>
+            <li><a href="#about-us"class="hover nav-link">About Us</a></li>
+            <li><a href="getcar.html"class="hover nav-link">Get Car</a></li>
+            <li><a href="contact.html"class="hover nav-link">Contact us</a></li>
+            <li><a href="#" id="login-btn" class="main-btn">Login</a></li>
+        </ul>
+    </header>
+    
+    <div class="login-parent">
+    <div class="login-wrapper">
+
+        <span class="close-btn">
+            <i class="ri-close-fill"></i>
+        </span>
+
+
+                <!-- login -->
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon"><i class="ri-mail-fill"></i></span>
+                    <input type="email" required id="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="ri-lock-fill"></i></span>
+                    <input type="password" required id="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember">
+                    <label for="agree">
+                    <input type="checkbox" id="agree">
+                    Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+ 
+
+                 <!-- register -->
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="ri-user-fill"></i></span>
+                    <input type="text" required id="fullname">
+                    <label for="fullname">Full Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="ri-user-fill"></i></span>
+                    <input type="text" required id="email">
+                    <label for="email">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="ri-mail-fill"></i></span>
+                    <input type="email" required id="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="ri-lock-fill"></i></span>
+                    <input type="password" required id="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember">
+                    <label for="agree-tc">
+                    <input type="checkbox" id="agree-tc">
+                        I agree to terms and conditions
+                    </label>
+                    
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+                <div class="register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+    <section class="first">
+
+        <div class="slideshowwrapper"></div>
+        <div class="main-form">
+            <div class="container">
+                <h1>Book Your Ride Now!</h1>
+                <form id="booking-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="pick-up-date">Pick-up Date:</label>
+                    <input type="date" id="pick-up-date" name="pick-up-date" required>
+        
+                    <label for="selected-car">Select Car:</label>
+                    <select id="selected-car" name="selected-car" required>
+                        <option value="">Select an option</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="van">Van</option>
+                    </select>
+        
+                    <button type="submit">Book Now</button>
+                </form>
+                
+                secondform
+
+                <form action="" class="display-form">
+                    <div class="input-box name">
+                        <span class="icon">
+                            <i class="ri-user-fill"></i></span>
+                        <input type="text" required id="name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-phone-fill"></i></span>
+                        <input type="number" required id="phone-no">
+                        <label for="phone-no">Phone</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-mail-fill"></i></span>
+                        <input type="email" required id="email">
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="feedback-text">
+                        <label for="feedback">
+                            Message
+                        </label>
+                        <textarea name="feedback" id="feedback" rows="5"></textarea>
+                        
+                    </div>
+                    <button type="submit" class="feedback-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+    
+    <section >
+        <div class="about-us-container">
+            <div class="about-us-photo">
+                <!-- <img src="https://www.pearl-motors.com/image/cache/catalog/home-pagee/dsc02945.JPG" alt=""> -->
+                <img src="https://images.pexels.com/photos/4713832/pexels-photo-4713832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <div class="about-us-content">
+                <h2>🚗 Welcome to Drivino®</h2><br>
+                <p> 
+                    Whether you're a seasoned traveler or a first-time renter, you can trust Drivino Car Rental to provide you with reliable transportation and exceptional service every step of the way. We look forward to being a part of your next adventure.
+                    Choose Drivino Car Rental and let us help you make memories that will last a lifetime.   
+                </p><br>
+                <p>
+                    With a diverse fleet of well-maintained vehicles ranging from compact cars to spacious SUVs, we cater to all your transportation needs, whether it's a weekend getaway, a business trip, or a family vacation. Our top priority is your satisfaction, and we strive to exceed your expectations by offering exceptional service and reliable vehicles at competitive rates.</p>
+            </div>
+        </div>
+    </section>
+                
+    
+                 <!-- categories -->
+    
+    <section id="cars-categories">
+        <div class="categories">
+            <div class="categoryheading">
+                <h2 class="heading">Catogories</h2>
+            </div>
+            <div class="carscategory">
+                <div class="car-holder ch1">
+                    <div class="carimg "><a href="getcar.html#sedan"><img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/10858/1690452480264/front-left-side-47.jpg?tr=w-664">
+                    <div class="cartypeheading">Sedan</div>
+                </a></div>
+
+                </div>
+                <div class="car-holder ch2">
+                    <div class="carimg"><a href="getcar.html#hatchback"> <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/KWID/10076/1705905595853/front-left-side-47.jpg?tr=w-664">
+                    <div class="cartypeheading">Hatchback</div>
+                </a></div>
+                </div>
+                <div class="car-holder ch3">
+                    <div class="carimg"><a href="getcar.html#suv"> <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Safari/11265/1697533880503/front-left-side-47.jpg?tr=w-664">
+                    <div class="cartypeheading">SUV</div>
+                </a></div>
+                </div>
+                <div class="car-holder ch4">
+                    <div class="carimg"><a href="getcar.html#luxury"> <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1695731100809/front-left-side-47.jpg?tr=w-664" alt="">
+                    <div class="cartypeheading">Luxury</div>
+                </a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+            <!-- about us -->
+
+    <section class="about" id="about-us">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>"The Best Customer Experience"</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://www.moneyweb.co.za/wp-content/uploads/2014/10/shutterstock_371114042-1024x683.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <p>  Welcome to Drivino Car Rental, your premier destination for hassle-free and affordable car rental solutions. At Drivino, we understand that every journey is unique, and we're dedicated to providing you with the perfect vehicle to make your travels comfortable and enjoyable. 
+                </p>
+                <p> 
+                     At Drivino, we believe in transparency and honesty in all our dealings. There are no hidden fees or surprises when you rent with us, what you see is what you get. Our dedicated team of professionals is always available to assist you with any questions or concerns you may have, ensuring a seamless rental experience from start to finish.
+                </p> <br>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+             <!-- "most-booked-cars" -->
+  
+   <section class="services" id="services">
+    <div class="heading">
+        <span>Best Services</span>
+        <h1>Explore Out Top Deals <br> From Top Rated Dealers</h1>
+    </div>
+    <div class="services-container">
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car1.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car2.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car3.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car4.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car5.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car6.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car5.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car5.jpg" alt="">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2> &#8377; 58500 |  &#8377; 358<span>/month</span></h2>
+            <a href="getcar.html" class="btn">Rent Now</a>
+        </div>
+    </div>
+</section>
+
+   
+            <!-- review  -->
+
+
+<section class="reviews" id="reviews">
+    <div class="heading">
+        <span>Reviews</span>
+        <h1>What Our Customer Says</h1>
+    </div>
+    
+<div class="reviews-container">
+       
+    <div class="box"><br>
+            <div class="rev-img">
+                <img src="img/rev1.jpg" alt="">
+            </div><br>
+            <h2>Arpit Bala</h2>
+            <p>~ Dehradun</p>
+            <div class="stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+            </div><br>
+            <p>~ I rented out Mustang Gt ,really enjoyed the car and great service by Drivino , i usually book from Drivino</p>
+
+        </div>
+
+        <div class="box"><br>
+            <div class="rev-img">
+                <img src="img/rev2.jpg" alt="">
+            </div><br>
+            <h2>Yogi Raj</h2>
+            <p>~ Mumbai</p>
+            <div class="stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+            </div><br>
+            <p>~ I always rent out from Drivino as they have best Prices and the best options to choose from.</p>
+
+        </div>
+
+        <div class="box"><br>
+            <div class="rev-img">
+                <img src="img/rev3.jpg" alt="">
+            </div><br>
+            <h2>Sunami</h2>
+            <p>~ Delhi</p>
+            <div class="stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+            </div><br>
+            <p>~ There car is always Clean and smells fresh , They really well maintain the cars which I like the most about Drivino !</p>
+        </div>
+   
+    </div>
+</section>
+
+
+
+          <!-- copyright -->
+
+    <div class="copyright">
+        <p>© Drivino™ All Rights Reserved®</p>
+        <div class="social">
+            <a href="#"><i class="ri-facebook-line"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+    
+
+          <!-- JScript -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+const wrapper = document.querySelector('.login-wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.main-btn');
+const iconClose = document.querySelector('.ri-close-fill');
+
+registerLink.addEventListener('click', ()=> {
+wrapper.classList.add('active');
+
+});
+
+loginLink.addEventListener('click', ()=> {
+wrapper.classList.remove('active');
+
+});
+
+btnPopup.addEventListener('click', ()=> {
+wrapper.classList.add('active-popup');
+
+});
+iconClose.addEventListener('click', ()=>{
+    wrapper.classList.remove('active-popup')
+})
+
+let menu=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
+menu.onclick=()=>{
+    menu.classList.toggle('ri-close-fill');
+    navbar.classList.toggle('active');
+}
+
+
+
+const sr= ScrollReveal ({
+    distance:'60px',
+    duration:2500,
+    delay:400,
+    reset:true
+})
+sr.reveal('.text',{delay:10,origin:'top'})
+sr.reveal('.form-container form',{delay:10,origin:'left'})
+sr.reveal('.heading',{delay:10,origin:'top'})
+sr.reveal('carscategory',{delay:10,origin:'top'})
+sr.reveal('.about-us-container .about-us-photo img',{delay:10,origin:'left'})
+sr.reveal('.about-container .about-img img',{delay:10,origin:'left'})
+sr.reveal('.carscategory .car-holder a img',{delay:10,origin:'right'})
+sr.reveal('.services-container .box',{delay:10,origin:'top'})
+sr.reveal('.about-container .box',{delay:10,origin:'top'})
+sr.reveal('.reviews-container',{delay:10,origin:'top'})
+
+</script>
+
+<script>
+      // Get the current URL
+  var currentUrl = window.location.href;
+
+// Get all navigation links
+var navLinks = document.querySelectorAll('.nav-link');
+
+// Loop through each link and check if its href matches the current URL
+navLinks.forEach(function(link) {
+  if (link.href === currentUrl) {
+    // Add 'current-page' class to the link if it matches the current URL
+    link.classList.add('current-page');
+  }
+});
+</script>
+</body>
+</html>
+
+<!-- .mainhead{
+    display: none;  } -->

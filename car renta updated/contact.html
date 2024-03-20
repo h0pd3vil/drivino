@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+
+
+
+
+
+
+.contact-form h2,.contact-details h2{
+    font-size: 2em;
+    color:#162938;
+    text-align:center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    /* pointer-events: none; */
+    transition: .2s; 
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding:0 35px 0 5px; 
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+.contact-box{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+.feedback-btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #162938;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 6px;
+    color: wheat;
+    margin-top: 20px;
+}
+.contact-form{
+   
+    width: 47%;
+    padding: 40px;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 20px;
+}
+/* label[for="feedback"]{
+    display: block;
+} */
+textarea{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #162938d0;
+    border-radius: 9px;
+    background: transparent;
+}
+.contact-details{
+    /* margin: 20px; */
+    width: 47%;
+    padding: 40px;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 20px;
+  
+}
+.contact-details .social-handles{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 500;
+    margin:40px 0 50px -5px;
+    
+}
+
+
+.contact-details .social-handles i{
+    color: #162938;
+}
+.contact-handles{
+    width: 100%;
+    margin: 40px 0 20px 0;
+    font-size: 1.2em;
+}
+.contact-handles i{
+    font-size: 1.12em;
+    margin: 10px 10px 0 0px;
+
+}
+.social-handles i{
+    font-size: 1.2em;
+    margin: 10px 10px 0 0px;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-right:20px;
+
+}
+.social-handles  a i{
+    transition: .3s;
+    border-radius:7px;
+}
+
+.contact-details p{
+    width: 80%;
+    margin-top: 25px;
+}
+.contact-handles .location,.e-mail,.phone-number{
+    margin:10px 0 20px 0;
+}
+@media(max-width:1100px) {
+    .contact-box{
+       display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    .contact-form{
+        width: 98%;
+
+    }
+    .contact-details{
+        width: 98%;
+        margin-bottom: 50px;
+        
+    }
+}
+
+.social-handles  a i:hover{
+    transform: scale(1.2);
+    box-shadow:12px 12px 25px rgba(0,0,0,.5);
+}
+
+
+</style>
+
+</head>
+<body>
+    
+
+
+
+
+<!--     
+    <div class="mainhead">
+    
+        <div class="dtails">
+            <a href="#" class>Logo</a>
+            <span>
+                <i class="ri-phone-fill"></i>
+                <p class="pinline">+91 1234567890</p>
+            </span>
+            <span>
+                <i class="ri-mail-fill"></i>
+                <a href="#">Drivino@dehradun.com</a>
+    
+            </span>
+    
+    
+        </div>
+        <div class="location-info">
+        <span><i class="ri-map-pin-2-fill"></i></span>
+        Dehradun City
+    </div>
+        
+    </div> -->
+    
+        <header>
+            <h3>Drivino - Rent Your Ride</h3>
+            <!-- menu icon -->
+            <i class="ri-menu-line" id="menu-icon"></i>
+            
+            <ul class="navbar">
+                <li><a href="index.html " class="hover nav-link">Home</a></li>
+                <li><a href="index.html#about-us"class="hover nav-link">About Us</a></li>
+                <li><a href="getcar.html"class="hover nav-link">Get Car</a></li>
+                <li><a href="contact.html"class="hover nav-link">Contact us</a></li>
+                <li><a href="index.html" id="login-btn" class="main-btn">Login</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="contact-box">
+
+                    <div class="contact-details">
+                        <h2>Let's get in touch</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing eltio. Illo cum impedit eligendi obcaecati a consectetur animi perspiciatis!</p>
+                        <div class="contact-handles">
+                            <div class="location">
+                                <i class="ri-map-pin-2-fill"></i>
+                                Location
+
+                            </div>
+                            <div class="e-mail">
+                                <i class=" ri-mail-fill"></i>
+                                Drivino.dehradun.com
+                            </div>
+                            <div class="phone-number">
+                                <i class="ri-phone-fill"></i>
+                                +91 123456789
+                            </div>
+                        </div>
+                        <p id="connect-line">Connect with us :</p>
+                        <div class="social-handles">
+                            <div class="face">
+                                <a href=""><i class="ri-facebook-line"></i></a>
+                            </div>
+                            <div class="tweet">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                            </div>
+                            <div class="ig">
+                                <a href=""><i class="ri-instagram-line"></i></a>
+                            </div>
+                            <div class="linked-in">
+                                <a href=""><i class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-form">
+                        <h2>Contact us</h2>
+                        <form action="">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="ri-user-fill"></i></span>
+                                <input type="text" required id="username">
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class="ri-mail-fill"></i></span>
+                                <input type="email" required id="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class="ri-phone-fill"></i></span>
+                                <input type="number" required id="phone-no">
+                                <label for="phone-no">Phone</label>
+                            </div>
+                            <div class="feedback-text">
+                                <label for="feedback">
+                                    Message
+                                </label>
+                                <textarea name="feedback" id="feedback" rows="5"></textarea>
+                                
+                            </div>
+                            <button type="submit" class="feedback-btn">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        
+
+        <script >
+              // Get the current URL
+  var currentUrl = window.location.href;
+
+// Get all navigation links
+var navLinks = document.querySelectorAll('.nav-link');
+
+// Loop through each link and check if its href matches the current URL
+navLinks.forEach(function(link) {
+  if (link.href === currentUrl) {
+    // Add 'current-page' class to the link if it matches the current URL
+    link.classList.add('current-page');
+  }
+});
+        </script>
+</body>
+</html>

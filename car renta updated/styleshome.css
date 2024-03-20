@@ -1,0 +1,358 @@
+
+
+/* for all */
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-weight:500;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size:2rem;
+}
+
+
+.carscategory{
+    /* width:100%; */
+    height:65vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    
+    
+  
+}
+.carscategory img{
+    width: 100%;
+
+}
+.car-holder{
+    width: 20%;
+}
+.car-holder .carimg a img{
+    width: 100%;
+    height: 170px;
+    /* border-radius: 8px; */
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.car-holder .cartypeheading,.categoryheading{
+    text-align: center;
+    margin: 20px 0;
+    color: #162938;
+}
+.categories{
+    
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 18px 18px 18px 18px rgba(74, 73, 12, 0.358);
+}
+.car-holder .cartypeheading{
+    cursor: pointer;
+    font-weight: 500;
+}
+.car-holder .cartypeheading:hover{
+    color: rgba(114, 51, 239, 0.732);
+    font-size: 1.4rem;
+    text-decoration-thickness: 0.2rem;
+    text-decoration: underline;
+    transition:  .5s ease;
+
+}
+
+
+
+
+
+
+
+
+    /* about us  */
+    .about-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 2rem;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+    }
+    .about-img img{
+        width: 100%;
+        border-radius: 18px;
+        box-shadow: 7px 9px 30px #1629385d;
+    }
+    .about-text span{
+        font-weight: 500;
+        color: var(--main-color);
+        text-transform: uppercase;
+
+    }
+    .about-text p{
+        margin:0.5rem 0 1.4rem;
+    }
+    .about-text .btn{
+        padding: 10px 20px;
+        background:#474fa0;
+        color: #fff;
+        border-radius: 0.5rem;
+    }
+    .about-text .btn:hover{
+        background: var(--main-color);
+    }
+
+/* services */
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px ,auto));
+    gap:1rem;
+    margin-top: 2rem;
+
+}
+.services-container .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(0,0,0,0.1);
+}
+.services-container .box .box-img{
+    width: 100%;
+    height: 200px;
+}
+.services-container .box .box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+.services-container .box p{
+    padding: 0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+.services-container .box h3{
+    font-weight: 500;
+}
+.services-container .box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+margin: 0.2rem 0 0.543m;    
+}
+.services-container .box h2 span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.services-container .box .btn{
+    display: flex;
+    justify-content: center;
+    background: #474fa0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+.services-container .box .btn:hover{
+    background: var(--main-color);
+}
+
+
+
+
+
+
+/* aboutus */
+.about-us-container{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid #16293800; */
+    border-radius: 20px;
+    box-shadow: 39px 30px 50px #16293825;
+    padding: 30px;
+}
+.about-us-container{
+    height: 80%;
+    /* width: 94%; */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.about-us-photo{
+    width: 50%;
+}
+.about-us-content{
+    width: 50%;
+}
+.about-us-photo img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+/* reviews */
+
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.rev-img{
+    width:100px;
+    height: 100px;
+}
+.rev-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+.reviews-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(179, 177, 68, 0.456);
+    border-radius: 0.5rem;
+}
+.reviews-container .box h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:0.5rem 0 05rem;
+}
+.reviews-container .box p{
+    font-style: italic;
+}
+.reviews-container .box .stars{
+    color:rgb(230, 249, 22);
+}
+
+
+/* copyright */
+.copyright{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social a{
+    color: #444;
+    padding: 10px;
+    font-size: 21px;    
+ }
+
+
+
+/* 
+.first{
+    display: flex;
+    width: 100%;
+}
+
+
+.main-form .container {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+ .main-form form {
+    width: 100%;
+    max-width: 30rem;
+}
+
+.main-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+ .main-form input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+.main-form .input-box input:focus~label,
+.main-form .input-box input:valid~label{
+    top:-5px;
+}
+
+.main-form button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.main-form button:hover {
+    background-color: #45a049;
+}
+.main-form .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .2s; 
+} */
+
+
+
+
+
+/* form styles */
+/* 
+.main-form{
+    width: 50%;
+}
+.first .display-form input[id="name"],input[id="phone-no"]{
+    width: 50%;
+}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+.display-form {}
+
+
+
+
+ */
